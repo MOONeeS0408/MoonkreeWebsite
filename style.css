@@ -1,62 +1,46 @@
-body {
-
-    background-color: rgba(230,222,212,255);
-    font-family: 'Playfair Display', serif;
-}
-
+/* POSICIONA TODO HEADER AL CENTRO */
 header {
-    border-bottom: 3px solid rgb(171, 35, 184);
-}
-
-/* POSICIONA IMAGEN AL CENTRO DEL HEADER */
-header .image-header {
-    display: flex;
-    justify-content: center;
-}
-
-header .image-header .bar-img {
-    width: 500px ; /* Tamaño imagen header */
-}
-
-
-header .nav-bar {
+    background-color:   rgb(238, 201, 255);
     display: flex;
     justify-content: center ;
+    flex-direction: column;
+    align-items: center;
 }
 
 header .nav-bar .non-list {
-    width: 300px;
-    height: auto;
-
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: row ;
 
-    border-bottom: 15px;
 }
 
 header .nav-bar .non-list li {
     list-style: none;
-
-    display: flex;
-    align-items: center;
     /* permite que no se separe debido a los espacios */
     white-space: nowrap;
 }
 
 header .nav-bar .non-list li a {
     /* espacio entre cada elemento de la barra de navegacion*/
+    border-left: 1px solid rgb(246, 126, 250);
+    border-right: 1px solid rgb(246, 126, 250);
+    border-radius: 10px;
     margin-right: 35px ;
+    margin-bottom: 10px ;
     padding: 10px;
+    padding-inline: 30px;
 }
 
-/* Efecto al pasar el mouse por barra de bavegaciòn */
-/* header .nav-bar .non-list li a:hover{
- 
-    background-color:rgb(210, 112, 219);
-    color: rgb(252, 240, 255);
-    border-bottom: 1.5px solid rgb(171, 35, 184);
-} */
+header {
+    border-bottom: 3px solid rgb(171, 35, 184);
+}
+
+header .image-header .bar-img {
+    width: 500px ; /* Tamaño imagen header */
+    border-radius: 30px;
+}
+
+/* HOVER PARA BARRA NAVEGACION */
 .hover {
     --b: 0.1em;   /* the thickness of the line */
     --c: rgb(171, 35, 184);/* the color */
@@ -75,6 +59,101 @@ header .nav-bar .non-list li a {
     --_p: 100%;
     --_s: .3s;
 }
+
+
+/* GENERAL ATTRIBUTERS */
+body {
+    /* background-color: rgb(230,222,212); */
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+section {
+
+
+        display: flex;
+        align-items: center; 
+        flex-direction: column;
+    
+}
+
+
+/* main .banner{
+    /* alinea el banner en medio  */
+    /* 
+}  */
+
+.home-info .container {
+    /* Establece el tamaño maximo del contenedor que incluye imagen  */
+    max-width: 700px;
+    /* acomoda en renglon imgenen on  */
+    display: flex; 
+    flex-direction: row; 
+}
+
+.home-info .container .right-box {
+    width: 94%;
+    max-width: 800px;
+}
+
+.home-info .container .but {
+    list-style: none;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.home-info .container .but .button {
+    background-color: rgb(223, 184, 255);
+    
+    text-align: center;
+
+    width: 100px;
+    /* flex-direction: column;  */
+    margin: 5px;
+    border-bottom: 15px;    
+
+    font-size: 14px;
+    position: relative;
+    padding: 4px 0;
+    display: block;
+
+    cursor: pointer; 
+
+    /* agregar bordees */
+}
+
+.home-info .container .but .button:hover{
+    background-color: rgb(185, 99, 255);
+    color: aliceblue;
+}
+
+
+
+
+
+
+.lista   {
+    
+    list-style: none;
+}
+
+/* Efecto al pasar el mouse por barra de bavegaciòn */
+/* header .nav-bar .non-list li a:hover{
+ 
+    background-color:rgb(210, 112, 219);
+    color: rgb(252, 240, 255);
+    border-bottom: 1.5px solid rgb(171, 35, 184);
+} */
+
 
 
 /* ᓚᘏᗢ ᓚᘏᗢ ᓚᘏᗢ ᓚᘏᗢ ᓚᘏᗢ ᓚᘏᗢ ᓚᘏᗢ ᓚᘏᗢ ᓚᘏᗢ ᓚᘏᗢ */
@@ -114,69 +193,13 @@ h4 {
 /*  */
 
 /* Acomoda imagen al lado del contenerdor, columnas titulo del contenedor */
-main .banner{
-    /* alinea el banner en medio  */
-    display: flex;
-    align-items: center; 
-
-    flex-direction: column;
-}
-
-main .banner .container {
-    /* Establece el tamaño maximo del contenedor que incluye imagen  */
-    max-width: 700px;
-    /* acomoda en renglon imgenen on  */
-    display: flex;
-    flex-direction: row; 
-    justify-content: center; 
-
-    
-}
-
-main .banner .container .right-box {
-    width: 94%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main .banner .container .but {
-    list-style: none;
-    
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-main .banner .container .but .button {
-    background-color: rgb(223, 184, 255);
-    
-    text-align: center;
-
-    width: 100px;
-    /* flex-direction: column;  */
-    margin: 5px;
-    border-bottom: 15px;    
-
-    font-size: 14px;
-    position: relative;
-    padding: 4px 0;
-    display: block;
-
-    cursor: pointer; 
-
-    /* agregar bordees */
-}
-
- main .banner .container .but .button:hover{
-    background-color: rgb(185, 99, 255);
-    color: aliceblue;
-}
 
 
-
-
+/* .seccion-oscura {
+    color: white;
+    background-color: #c054ff;
+  } */
+  
 
 
 
